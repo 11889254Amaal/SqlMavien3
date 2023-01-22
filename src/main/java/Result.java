@@ -67,10 +67,10 @@ public class Result {
 	public void setCreated_date(Date created_date) {
 		this.created_date = created_date;
 	}
-	public Date getPublished_date() {
+	public String getPublished_date() {
 		return published_date;
 	}
-	public void setPublished_date(Date published_date) {
+	public void setPublished_date(String published_date) {
 		this.published_date = published_date;
 	}
 	public String getMaterial_type_facet() {
@@ -138,7 +138,7 @@ public class Result {
     public String item_type;
     public Date updated_date;
     public Date created_date;
-    public Date published_date;
+    public String published_date;
     public String material_type_facet;
     public String kicker;
     public ArrayList<String> des_facet;
