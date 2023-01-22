@@ -3,14 +3,12 @@ import java.util.Date;
 import java.util.List;
 
 public class Root {
-	  public String status;
+	    public String status;
 	    public String copyright;
 	    public String section;
 	    public Date last_updated;
 	    
-	    
-	    
-	    public Result[] getResults() {
+		public Result[] getResults() {
 			return results;
 		}
 		public void setResults(Result[] results) {
@@ -50,6 +48,10 @@ public class Root {
 		}
 		
 		public int num_results;
+		public Object apiResult1;
+
+
+		
 		
 
 

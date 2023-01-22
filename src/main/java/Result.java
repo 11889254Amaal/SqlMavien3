@@ -5,7 +5,8 @@ public class Result {
     public String section;
     public String subsection;
     public String title;
-  
+    public String book_author;
+    
     public String getSection() {
 		return section;
 	}
@@ -120,6 +121,16 @@ public class Result {
 	public void setShort_url(String short_url) {
 		this.short_url = short_url;
 	}
+	
+	
+	public String getBook_author() {
+		return book_author;
+	}
+	public void setBook_author(String book_author) {
+		this.book_author = book_author;
+	}
+
+
 	public String myabstract;
     public String url;
     public String uri;
