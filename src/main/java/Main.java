@@ -418,15 +418,18 @@ public class Main {
 				try (Connection conn11111111 = DriverManager.getConnection(DB_URL, USER, PASS);
 						Statement stmt = conn11111111.createStatement();) {
 					String sql = "CREATE TABLE Artical " + "(id INTEGER not NULL, "
-							+ "Pub_date  VARCHAR(100)  ,"
-							+ "FOREIGN KEY (Pub_date) REFERENCES books(Published_date) ON DELETE CASCADE ,"
-							+ " Document_type   VARCHAR(100) not NULL, " +" Section_name   VARCHAR(100) not NULL, "
-							+ " Subsection_name   VARCHAR(100) not NULL, " +" Firstname   VARCHAR(100) not NULL, "
-							+ " Middlename   VARCHAR(100) not NULL, " 
+							+ " Pub_date    VARCHAR(100) not NULL, " + "book_id  INTEGER  ,"
+							+ "FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE ,"
+							+ "bookauthor_id  INTEGER  ," + "FOREIGN KEY (bookauthor_id) REFERENCES bookauthor(id) ON DELETE CASCADE ,"
+							+ " Document_type VARCHAR(100) , " + " Section_name VARCHAR(100), " + " Subsection_name VARCHAR(100), "
+							+ " Firstname VARCHAR(100), "+ " Middlename VARCHAR(100), "
 							+ " PRIMARY KEY ( id ))";
 					String sql1 = "ALTER TABLE Artical AUTO_INCREMENT=1";
 					stmt.executeUpdate(sql);
 					stmt.executeUpdate(sql1);
+					
+				
+					
 
 					System.out.println(true + "===>Created Articals Table table in given database...");
 
